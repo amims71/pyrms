@@ -62,6 +62,7 @@ def start():
         print("Total Bill is:", total)
         payment=Payment(total)
         payment.pay(int(input("paid Amount:")))
+        start()
     elif user == 1:
         menuList.append(Menu("Pizza", 100))
         menuList.append(Menu("Burger", 200))
