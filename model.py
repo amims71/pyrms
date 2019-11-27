@@ -62,8 +62,10 @@ def start():
         print("Total Bill is:", total)
         payment=Payment(total)
         payment.pay(int(input("paid Amount:")))
+        print("Thank You",cUser.name,"for using this software")
         start()
     elif user == 1:
+        cUser = Manager(uName)
         menuList.append(Menu("Pizza", 100))
         menuList.append(Menu("Burger", 200))
         menuList.append(Menu("Fried Chicken", 150))
@@ -78,12 +80,13 @@ def start():
             for i in range(count):
                 menuList.append(Menu(input("Name: "),int(input("price: "))))
                 print("Menu Added")
-            print("Thank You")
+            print("Thank You",cUser.name,"for using this software")
         else:
-            print("Thank You")
+            print("Thank You",cUser.name,"for using this software")
+
         start()
     else:
-        print("Thanks You")
+        print("Thanks You",uName)
 
 
 start()
